@@ -11,14 +11,12 @@ if (process.env.NODE_ENV === "production") {
 }
 
 ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <AuthProvider>
-        <Routes>
-          <Route path="/*" element={<App />} />
-        </Routes>
-      </AuthProvider>
-    </BrowserRouter>
-  </React.StrictMode>,
+  <BrowserRouter>
+    <AuthProvider>
+      <Routes>
+        <Route path="/*" element={<App />} />
+      </Routes>
+    </AuthProvider>
+  </BrowserRouter>,
   document.getElementById("root")
 );

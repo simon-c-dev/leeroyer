@@ -8,7 +8,6 @@ import ProductDetails from "./components/gallery/productDetails";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import RequireAuth from "./components/RequireAuth/RequireAuth";
-import Missing from "./components/Missing/Missing";
 
 import "./index.css";
 
@@ -35,7 +34,7 @@ function App() {
       </Route>
 
       {/* catch all */}
-      <Route path="*" element={<Missing />} />
+      <Route path="*" element={<Home />} />
     </Routes>
   );
 }

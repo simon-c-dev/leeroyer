@@ -16,23 +16,25 @@ export default function ProductDetails() {
             {image
               .filter((art) => art.title === title)
               .map((filteredArt) => (
-                <>
-                  <img
-                    src={require("../../global/data/galleryImages/" +
-                      filteredArt.src +
-                      ".png")}
-                    alt="Art Piece"
-                    className="flex "
-                  ></img>
-                  <div className="flex flex-wrap justify-center items-center w-screen mt-6">
-                    <div className="flex text-4xl w-full justify-center">
-                      {filteredArt.title}
-                    </div>
-                    <div className="flex text-lg w-full justify-center">
-                      {filteredArt.width} X {filteredArt.height} INCHES
-                    </div>
+                <img
+                  src={require("../../global/data/galleryImages/" +
+                    filteredArt.src +
+                    ".png")}
+                  alt="Art Piece"
+                  className="flex "
+                ></img>
+              ))}
+            {image
+              .filter((art) => art.title === title)
+              .map((filteredArt) => (
+                <div className="flex flex-wrap justify-center items-center w-screen mt-6">
+                  <div className="flex text-4xl w-full justify-center">
+                    {filteredArt.title}
                   </div>
-                </>
+                  <div className="flex text-lg w-full justify-center">
+                    {filteredArt.width} X {filteredArt.height} INCHES
+                  </div>
+                </div>
               ))}
           </div>
         </div>

@@ -116,7 +116,7 @@ export default function Example() {
                             {crumb}
                           </NavLink>
 
-                          <div className="flex h-8 w-8 mx-2">
+                          <div className="flex h-4 w-4 mx-2 sm:h-8 sm:w-8">
                             <svg
                               class="text-white"
                               aria-hidden="true"

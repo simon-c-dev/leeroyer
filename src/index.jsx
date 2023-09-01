@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import App from "./App";
 
 import { AuthProvider } from "./context/AuthProvider";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { disableReactDevTools } from "@fvilers/disable-react-devtools";
 
 if (process.env.NODE_ENV === "production") {
@@ -11,12 +11,12 @@ if (process.env.NODE_ENV === "production") {
 }
 
 ReactDOM.render(
-  <HashRouter>
+  <BrowserRouter>
     <AuthProvider>
       <Routes>
         <Route path="/*" element={<App />} />
       </Routes>
     </AuthProvider>
-  </HashRouter>,
+  </BrowserRouter>,
   document.getElementById("root")
 );

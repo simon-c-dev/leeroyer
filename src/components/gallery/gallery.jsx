@@ -10,8 +10,8 @@ function Gallery() {
       <div className="flex h-screen flex-col">
         <NavBar />
 
-        <div className="flex flex-grow justify-center overflow-auto mb-4">
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 max-w-3xl lg:max-w-4xl">
+        <div className="flex flex-grow justify-center overflow-auto mb-8">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 max-w-3xl lg:max-w-4xl">
             {images.images.map((img) => (
               <div>
                 <NavLink to={`/gallery/${img.title}`}>

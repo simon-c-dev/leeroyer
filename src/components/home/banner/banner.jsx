@@ -1,10 +1,18 @@
+import { isMobile, isTablet, isDesktop } from "react-device-detect";
+
 function Banner() {
   return (
-    <div
-      className="h-28 text-7xl text top-1/2 w-full bg-white fixed flex justify-center items-center -translate-y-1/2 font-conduitExtralight
-    lg:h-36 lg:text-8xl"
-    >
-      LEE ROYER
+    <div className="fixed flex h-screen w-screen justify-center items-center font-conduitExtralight">
+      <div
+        className="fixed flex h-28 w-full bg-white justify-center items-center 
+    lg:h-36 "
+      >
+        {isMobile ? (
+          <div className="flex text-7xl lg:text-8xl h-1/2">LEE ROYER</div>
+        ) : (
+          <div className="flex text-7xl lg:text-8xl">LEE ROYER</div>
+        )}
+      </div>
     </div>
   );
 }

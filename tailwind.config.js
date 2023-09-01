@@ -13,6 +13,6 @@ module.exports = {
         "10xl": "9rem",
       },
     },
-    plugins: [],
+    pLugins: [require("@tailwindcss/forms")],
   },
 };

@@ -1,3 +1,4 @@
+import { isMobile, isTablet, isDesktop } from "react-device-detect";
 import React from "react";
 
 function MenuBtn({ toggle, isShow }) {
@@ -9,9 +10,15 @@ function MenuBtn({ toggle, isShow }) {
           isShow ? "opacity-0 -translate-x-1/2 translate-y-full" : null
         }`}
       >
-        <div className="text-4xl lg:text-5xl text-white font-conduitLight mb-2">
-          <h1>Menu</h1>
-        </div>
+        {isMobile ? (
+          <div className="flex h-1/2 text-4xl lg:text-5xl text-white font-conduitLight mb-2">
+            Menu
+          </div>
+        ) : (
+          <div className="flex text-4xl lg:text-5xl text-white font-conduitLight mb-2">
+            Menu
+          </div>
+        )}
       </div>
     </>
   );

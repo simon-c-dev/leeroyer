@@ -16,7 +16,7 @@ function Gallery() {
               <div>
                 <NavLink to={`/gallery/${img.title}`}>
                   <img
-                    className="h-full max-w-full rounded-lg"
+                    className="max-w-full rounded-lg"
                     src={require("../../global/data/galleryImages/" +
                       img.src +
                       ".png")}

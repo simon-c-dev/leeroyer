@@ -1,9 +1,9 @@
 import Burger from "../../global/assets/icons/burger-checklist-list-menu-navigation-svgrepo-com.svg";
 
-import Facebook from "../../global/assets/icons/social/facebook.svg";
-import Instagram from "../../global/assets/icons/social/instagram.svg";
-import Twitter from "../../global/assets/icons/social/twitter.svg";
-import Youtube from "../../global/assets/icons/social/youtube.svg";
+import Facebook from "../../global/assets/icons/social/facebook_circled.svg";
+import Instagram from "../../global/assets/icons/social/instagram_circled.svg";
+import Twitter from "../../global/assets/icons/social/twitter_circled.svg";
+import Youtube from "../../global/assets/icons/social/youtube_circled.svg";
 import right_chevron from "../../global/assets/icons/right_chevron.svg";
 
 import { Fragment, useState } from "react";
@@ -42,24 +42,30 @@ export default function Example() {
 
   return (
     <>
-      <nav className="bg-white shadow-lg font-conduitExtralight h-[120px]">
+      <nav className="bg-white shadow-lg font-conduitExtralight h-[186px]">
         {/*FULL NAV*/}
         <div className="flex justify-center">
-          <div className="flex items-center justify-between h-20 max-w-3xl lg:max-w-4xl px-2 w-screen flex-auto">
+          <div className="flex items-center justify-between h-[112px] max-w-4xl lg:max-w-5xl px-2 w-screen flex-auto">
             {/*LOGO*/}
-            <div className="flex flex-none self-center text-4xl">LEE ROYER</div>
+            <div
+              className="flex flex-none self-center 
+            text-4xl lg:text-5xl"
+            >
+              LEE ROYER
+            </div>
             {/*LOGO END*/}
 
             {/*TOP NAV*/}
             <div className="hidden sm:ml-6 sm:flex shrink">
-              <div className="flex shrink space-x-4 ">
+              <div className="flex shrink sm:space-x-2 md:space-x-4 ">
                 {navigation.map((item) => (
                   <NavLink
                     to={item.href}
                     className={({ isActive }) =>
                       classNames(
                         isActive ? "font-conduitBold" : "",
-                        "flex-shrink rounded-md px-3 py-2 text-lg group text-black transition duration-300"
+                        "flex-shrink rounded-md px-3 py-2 group text-black transition duration-300" +
+                          "sm:text-xl md:text-2xl lg:text-3xl"
                       )
                     }
                   >
@@ -74,12 +80,12 @@ export default function Example() {
             <div className="flex">
               {/*Social Media*/}
               {social.map((icon) => (
-                <button type="button" className="relative rounded-full p-1">
+                <button type="button" className="relative">
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">View Social</span>
                   <img
                     src={icon.icon}
-                    className=" mx-[2px] h-4 w-4 sm:h-5 sm:w-5 rounded-full outline outline-2 outline-offset-2 outline-[#838ebc]"
+                    className=" mx-[2px] h-8 w-8 lg:h-[38px] lg:w-[38px]"
                   ></img>
                 </button>
               ))}
@@ -91,7 +97,7 @@ export default function Example() {
                   onClick={() => setOpen(true)}
                   className="relative inline-flex items-center justify-center rounded-md p-2 focus:outline-none"
                 >
-                  <img src={Burger} className="h-8 w-8"></img>
+                  <img src={Burger} className="h-10 w-10"></img>
                 </button>
               </div>
               {/*BURGER && XMARK END*/}
@@ -100,9 +106,12 @@ export default function Example() {
         </div>
         {/*FULL NAV END*/}
 
-        <section className="flex justify-center h-10 w-screen bg-black shadow-2xl ">
-          <div className="flex h-full w-full items-center max-w-3xl lg:max-w-4xl px-2">
-            <div className="flex justify-center place-items-center h-full text-white text-xl">
+        <section className="flex justify-center h-[73px] w-screen bg-black shadow-2xl ">
+          <div className="flex h-full w-full items-center max-w-4xl lg:max-w-5xl px-2">
+            <div
+              className="flex justify-center place-items-center h-full text-white 
+            text-xl md:text-2xl lg:text-3xl"
+            >
               {breadCrumbs.length > 2
                 ? breadCrumbs.splice(1).map((crumb, i) => {
                     crumb = capitalizeFirstLetter(crumb);

@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "../navBar/navBar";
 import images from "../../global/data/gallery.json";
 import { useParams } from "react-router-dom";
+import ImageSkelly from "../imageSkelly/ImageSkelly";
 
 export default function ProductDetails() {
   const image = images.images;
@@ -16,13 +17,13 @@ export default function ProductDetails() {
             {image
               .filter((art) => art.title === title)
               .map((filteredArt) => (
-                <img
+                <ImageSkelly
+                  className="flex"
                   src={require("../../global/data/galleryImages/" +
                     filteredArt.src +
                     ".png")}
                   alt="Art Piece"
-                  className="flex "
-                ></img>
+                />
               ))}
             {image
               .filter((art) => art.title === title)

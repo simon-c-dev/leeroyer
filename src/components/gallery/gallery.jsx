@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import ImageSkelly from "../imageSkelly/ImageSkelly";
 import NavBar from "../navBar/navBar";
 import images from "../../global/data/gallery.json";

@@ -48,7 +48,7 @@ export default function Example() {
           <div className="flex items-center justify-between h-[112px] max-w-4xl lg:max-w-5xl px-2 w-screen flex-auto">
             {/*LOGO*/}
             <div
-              className="flex flex-none self-center 
+              className="flex flex-none
             text-4xl lg:text-5xl"
             >
               LEE ROYER

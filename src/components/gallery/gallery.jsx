@@ -1,5 +1,5 @@
-import React from "react";
-
+import React, { useState, useEffect } from "react";
+import ImageSkelly from "../imageSkelly/ImageSkelly";
 import NavBar from "../navBar/navBar";
 import images from "../../global/data/gallery.json";
 import { NavLink } from "react-router-dom";
@@ -15,13 +15,13 @@ function Gallery() {
             {images.images.map((img) => (
               <div>
                 <NavLink to={`/gallery/${img.title}`}>
-                  <img
+                  <ImageSkelly
                     className="max-w-full rounded-lg"
                     src={require("../../global/data/galleryImages/" +
                       img.src +
                       ".png")}
                     alt="Art Piece"
-                  ></img>
+                  />
                 </NavLink>
               </div>
             ))}

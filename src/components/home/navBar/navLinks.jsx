@@ -13,7 +13,7 @@ function NavLinks({ toggle, isShow }) {
   return (
     <div
       className={`fixed flex bg-black left-1/2 justify-center top-full -translate-x-1/2 opacity-100 duration-500 
-      w-72 h-56 lg:w-80 lg:h-64 ${isShow ? "-translate-y-full" : null}`}
+      w-72 h-56 lg:w-80 lg:h-64 ${isShow ? "-translate-y-full" : "hidden"}`}
     >
       <div className="flex absolute justify-center items-center text-white w-12 h-12 right-0 text-6xl pointer-events-auto">
         {

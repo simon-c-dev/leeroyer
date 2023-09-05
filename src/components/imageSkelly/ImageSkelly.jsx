@@ -20,16 +20,8 @@ function ImageSkelly(props) {
       <div
         className={`${props.className} ${imageLoaded ? "hidden" : "inline"}`}
       >
-        <Blurhash
-          hash="UAG[[{?b~qM{_3~q~qof9FM{WBIU00-;j[fQ"
-          width="200"
-          height="200"
-          resolutionX={32}
-          resolutionY={32}
-          punch={1}
-        />
+        <Blurhash hash="UAG[[{?b~qM{_3~q~qof9FM{WBIU00-;j[fQ" punch={1} />
       </div>
-
       <img
         src={props.src}
         className={`${props.className} ${!imageLoaded ? "hidden" : "inline"}`}

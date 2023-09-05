@@ -22,16 +22,15 @@ function App() {
       {/* public routes */}
       <Route path="login" element={<Login />} />
       <Route path="register" element={<Register />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/news" element={<News />} />
+      <Route path="/gallery" element={<Gallery />} />
+      <Route path="/bio" element={<Bio />} />
+      <Route path="/store" element={<Store />} />
+      <Route path="/gallery/:title" element={<ProductDetails />} />
 
-      {/* protected routes */}
-      <Route element={<RequireAuth allowedRoles={[ROLES.Admin]} />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/news" element={<News />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/bio" element={<Bio />} />
-        <Route path="/store" element={<Store />} />
-        <Route path="/gallery/:title" element={<ProductDetails />} />
-      </Route>
+      {/* protected routes
+      <Route element={<RequireAuth allowedRoles={[ROLES.Admin]} />}></Route> */}
 
       {/* catch all */}
       <Route path="*" element={<Home />} />

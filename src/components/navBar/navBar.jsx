@@ -1,4 +1,5 @@
 import Burger from "../../global/assets/icons/burger-checklist-list-menu-navigation-svgrepo-com.svg";
+import { isMobile } from "react-device-detect";
 
 import Facebook from "../../global/assets/icons/social/facebook_circled.svg";
 import Instagram from "../../global/assets/icons/social/instagram_circled.svg";
@@ -47,12 +48,17 @@ export default function Example() {
         <div className="flex justify-center">
           <div className="flex items-center justify-between h-[112px] max-w-4xl lg:max-w-5xl px-2 w-screen flex-auto">
             {/*LOGO*/}
-            <div
-              className="flex flex-none
-            text-4xl lg:text-5xl"
-            >
-              LEE ROYER
-            </div>
+
+            {isMobile ? (
+              <div className="flex flex-none text-[42px] lg:text-6xl justify-center items-center pt-2">
+                LEE ROYER
+              </div>
+            ) : (
+              <div className="flex flex-none text-[42px] lg:text-6xl justify-center items-center">
+                LEE ROYER
+              </div>
+            )}
+
             {/*LOGO END*/}
 
             {/*TOP NAV*/}
@@ -85,7 +91,7 @@ export default function Example() {
                   <span className="sr-only">View Social</span>
                   <img
                     src={icon.icon}
-                    className=" mx-[2px] h-8 w-8 lg:h-[38px] lg:w-[38px]"
+                    className=" mx-[1px] h-[28px] w-[28px] lg:h-[38px] lg:w-[38px]"
                   ></img>
                 </button>
               ))}
@@ -97,7 +103,7 @@ export default function Example() {
                   onClick={() => setOpen(true)}
                   className="relative inline-flex items-center justify-center rounded-md p-2 focus:outline-none"
                 >
-                  <img src={Burger} className="h-10 w-10"></img>
+                  <img src={Burger} className="h-11 w-11"></img>
                 </button>
               </div>
               {/*BURGER && XMARK END*/}

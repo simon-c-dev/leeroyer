@@ -198,7 +198,7 @@ export default function Example() {
                             className={({ isActive }) =>
                               classNames(
                                 isActive ? "text-black " : "text-white",
-                                "block rounded-md px-3 py-2 font-medium text-4xl text-end  font-conduitLight "
+                                "outline-none block rounded-md px-3 py-2 font-medium text-4xl text-end  font-conduitLight "
                               )
                             }
                           >

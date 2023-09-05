@@ -4,7 +4,7 @@ function Banner() {
   return (
     <div className="fixed flex h-screen w-screen justify-center items-center font-conduitExtralight">
       <div
-        className="fixed flex h-28 w-full bg-white justify-center items-center 
+        className="fixed flex h-28 w-screen bg-white justify-center items-center 
     lg:h-36 "
       >
         {isMobile ? (
